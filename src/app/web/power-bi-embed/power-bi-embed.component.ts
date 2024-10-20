@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as pbi from 'powerbi-client';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { PowerBiService } from '../../services/power-bi.service';
-import { environment } from '../../../environtment';
 
 
 @Component({
