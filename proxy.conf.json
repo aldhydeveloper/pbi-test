@@ -1,0 +1,8 @@
+{
+    "/oauth/token": {
+      "target": "https://login.microsoftonline.com/b3ddb153-3e04-4945-9157-215ea5f4b505/oauth2",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
