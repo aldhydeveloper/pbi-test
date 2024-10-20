@@ -28,7 +28,7 @@ export class PowerBiEmbedComponent implements OnInit {
     const payload = {
       "grant_type": "client_credentials",
       "client_id": "075fb755-6f54-44bb-845f-0d1586481b9a",
-      "client_secret": "kDU8Q~fEcTGoBe78oOVTjgMW3pSAD5XjQT0kFb9X",
+      // "client_secret": environment.clientSecret,
       "scope": 'https://analysis.windows.net/powerbi/api/.default',
       "username": 'info@collexebi.onmicrosoft.com',
       "password": 'collexe@102024'
