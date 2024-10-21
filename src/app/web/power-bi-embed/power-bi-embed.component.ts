@@ -8,7 +8,10 @@ import { PowerBiService } from '../../services/power-bi.service';
   selector: 'app-power-bi-embed',
   templateUrl: './power-bi-embed.component.html',
   styleUrls: ['./power-bi-embed.component.css'],
-  standalone: true
+  standalone: true,
+  imports: [
+    HttpClient
+  ]
 })
 export class PowerBiEmbedComponent implements OnInit {
   @ViewChild('reportContainer', { static: true }) reportContainer!: ElementRef;
