@@ -5,14 +5,15 @@ const app = express();
 // Serve static files from the Angular dist directory
 app.use(express.static(path.join(__dirname, 'dist/pbi-embeded-collexe')));
 
-// Only serve the index.html file for non-static routes
+// Ensure requests for JavaScript, CSS, images, etc. are not caught by the wildcard route
+app.get('*.*', express.static(path.join(__dirname, 'dist/pbi-embeded-collexe')));
+
+// Catch all other routes and return the index.html for Angular routing
 app.get('*', (req, res) => {
-  if (req.accepts('html')) {
-    res.sendFile(path.resolve(__dirname, 'dist/pbi-embeded-collexe/browser', 'index.html'));
-  }
+  res.sendFile(path.resolve(__dirname, 'dist/pbi-embeded-collexe/browser', 'index.html'));
 });
 
-// Start the server on Heroku's environment port or 8080
+// Start the server
 app.listen(process.env.PORT || 8080, () => {
-  console.log('Server is running...');
+  console.log('Server running...');
 });
