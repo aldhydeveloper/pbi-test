@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'dist/pbi-embeded-collexe')));
 // Only serve the index.html file for non-static routes
 app.get('*', (req, res) => {
   if (req.accepts('html')) {
-    res.sendFile(path.resolve(__dirname, 'dist/pbi-embeded-collexe', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'dist/pbi-embeded-collexe/browser', 'index.html'));
   }
 });
 
