@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as pbi from 'powerbi-client';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { PowerBiService } from '../../services/power-bi.service';
 
 
@@ -10,7 +10,7 @@ import { PowerBiService } from '../../services/power-bi.service';
   styleUrls: ['./power-bi-embed.component.css'],
   standalone: true,
   imports: [
-    HttpClient
+    HttpClientModule
   ]
 })
 export class PowerBiEmbedComponent implements OnInit {
